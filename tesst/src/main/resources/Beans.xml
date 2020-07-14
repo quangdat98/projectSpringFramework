@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="helloWorld" class="example.controllers.HelloWorld">
+            <property name="message1" value="hello message1 of world" />
+            <property name="message2" value="hello message2 of world" />
+    </bean>
+
+   <bean id="helloVN" class="example.controllers.HelloVietNam" parent="helloWorld">
+        <property name="message1" value="hello message1 of VN" />
+        <!-- k chuyền giá trị cho message2-->
+        <property name="message3" value="hello message3 of VN" />
+    </bean>
+
+</beans>
